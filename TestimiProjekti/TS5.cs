@@ -41,6 +41,35 @@ namespace TestimiProjekti
 
 
         }
+        [Test]
+        public void TS5_BanderolaJoValide()
+        {
+            config.Hapja("https://ekosova.rks-gov.net/Service/36");
+            config.driver.FindElement(By.XPath("/html/body/div[2]/section/div[2]/div/a")).Click();
+            IWebElement userInput = config.driver.FindElement(By.XPath("/html/body/div[2]/section/form/div[1]/input"));
+            userInput.Click();
+            userInput.SendKeys(TopSecret.eKsUser);
+            IWebElement userPw = config.driver.FindElement(By.XPath("/html/body/div[2]/section/form/div[2]/input"));
+            userPw.Click();
+            userPw.SendKeys(TopSecret.eKsPw);
+            config.driver.FindElement(By.XPath("/html/body/div[2]/section/form/button")).Click();
+            Thread.Sleep(3000);
+            IWebElement bndInp = config.driver.FindElement(By.XPath("/html/body/div[2]/section/div[2]/div/table/tbody/tr[1]/td[1]/input"));
+            bndInp.Click();
+            bndInp.SendKeys(TopSecret.BanderolaJoAktive);
+            config.driver.FindElement(By.XPath("/html/body/div[2]/section/div[2]/div/table/tbody/tr[1]/td[2]/button")).Click();
+            Thread.Sleep(3000);
+            string txt = config.driver.FindElement(By.XPath("/html/body/div[4]/div/div[2]/p")).Text;
+            if (txt == "Nuk është identifikuar asnjë produkt me këtë numër serik")
+            {
+                Assert.Pass();
+            }
+            else
+            {
+                Assert.Fail();
+            }
 
+
+        }
     }
 }
