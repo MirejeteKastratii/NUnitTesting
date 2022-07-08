@@ -14,5 +14,8 @@ namespace Testimi
 
         public static string emailForW3 = "florentinahamiti2@gmail.com";
         public static string passwordW3 = "Admin123.";
+        public static string eKsUser = "1249185635";
+        public static string eKsPw = "Mirejeta123.";
+        public static string BanderolaAktive = "1000047552004589";
     }
 }

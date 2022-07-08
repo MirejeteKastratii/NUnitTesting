@@ -11,15 +11,6 @@ namespace TestimiProjekti
     internal class TS8
     {
         Config config = new Config();
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        public void LogIn()
-        {
-
-        }
 
         [Test]
         public void KrijimiSpacesMeTemplate()
@@ -42,12 +33,21 @@ namespace TestimiProjekti
             Thread.Sleep(2000);
             IWebElement inputNameWorkspace = config.driver.FindElement(By.XPath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/form/div/input"));
             inputNameWorkspace.Click();
-            inputNameWorkspace.SendKeys("myworkspacenjee");
+            inputNameWorkspace.SendKeys("abcdefughyhriinvest");
             Thread.Sleep(2000);
             IWebElement ctn3 = config.driver.FindElement(By.XPath("//*[@id=\"root\"]/div[3]/div[1]/div[2]/a/button"));
             ctn3.Click();
-
-            //qetu e krahason asetin
+            Thread.Sleep(5000);
+            string spaceTxt = config.driver.FindElement(By.XPath("/html/body/div[1]/div[3]/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div/div[1]")).Text;
+            if (spaceTxt == "abcdefughyhriinvest")
+            {
+                Assert.Pass();
+            }
+            else
+            {
+                Assert.Fail();
+            }
+          
         }
         [Test]
         public void KrijimiSpacePaTemplate()
@@ -75,12 +75,19 @@ namespace TestimiProjekti
             Thread.Sleep(4000);
             IWebElement nameSpace = config.driver.FindElement(By.XPath("/html/body/div[1]/div[3]/div[2]/div[2]/form/div/input"));
             nameSpace.Click();
-            nameSpace.SendKeys("space1200f");
+            nameSpace.SendKeys("space1200fm1riinvest");
             IWebElement continueBtn2 = config.driver.FindElement(By.XPath("/html/body/div[1]/div[3]/div[1]/div[2]/a/button"));
             continueBtn2.Click();
             Thread.Sleep(5000);
-
-            //e shton asetin
+            string txtSpace = config.driver.FindElement(By.XPath("/html/body/div[1]/div[3]/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div/div[1]")).Text;
+            if (txtSpace == "space1200fm1riinvest")
+            {
+                Assert.Pass();
+            }
+            else
+            {
+                Assert.Fail();
+            }
         }
     }
 }
