@@ -17,5 +17,10 @@ namespace Testimi
         public static string eKsUser = "1249185635";
         public static string eKsPw = "Mirejeta123.";
         public static string BanderolaAktive = "1000047552004589";
+
+        public static string emri = "Florentine";
+        public static string mbiemri = "Hamiti";
+        public static DateTime data = new DateTime(2000,12,20);
+        public static string Pasaporta = "P01452435";
     }
 }

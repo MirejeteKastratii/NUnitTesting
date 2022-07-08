@@ -64,9 +64,6 @@ namespace TestimiProjekti
             {
                 Assert.Fail();
             }
-
-
-            //kontrollo asetin
         }
         [Test]
         public void FiltrimiProdukteveNeBazeTeCmimeveTeShtrenjta()
@@ -94,9 +91,6 @@ namespace TestimiProjekti
             {
                 Assert.Fail();
             }
-
         }
-
-        //sipas dates nuk e kom punu
     }
 }
