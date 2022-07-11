@@ -21,7 +21,8 @@ namespace Testimi
 
         public static string emri = "Florentine";
         public static string mbiemri = "Hamiti";
-        public static string Pasaporta = "P014343435";
+        public static string Pasaporta = "P098723123";
         public static string Leternjoftimi = "1249496045";
+        public static string LejeQendrimiInvlaid = "4321234";
     }
 }

@@ -116,10 +116,12 @@ namespace TestimiProjekti
             if (str.ToLower() == "ju lutem përcaktoni datën dhe kohën e terminit.")
             {
                 Assert.Pass();
+                config.driver.Close();
             }
             else
             {
                 Assert.Fail();
+                config.driver.Close();
             }
         }
     }
