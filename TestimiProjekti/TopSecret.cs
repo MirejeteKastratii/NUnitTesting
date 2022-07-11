@@ -24,5 +24,12 @@ namespace Testimi
         public static string Pasaporta = "P098723123";
         public static string Leternjoftimi = "1249496045";
         public static string LejeQendrimiInvlaid = "4321234";
+        public static string KahootValidPin = "6905153";
+        public static string KahootInvalidPin = "6905152";
+
+        public static string KahootName = "test23424";
+        public static string KahootName2 = "test123";
+        public static string FbNumber = "+38349326024";
+        public static string FbPw = "1234Qwer.";
     }
 }

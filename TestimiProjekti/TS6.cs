@@ -83,6 +83,8 @@ namespace TestimiProjekti
             secondCmimiMeILarte = secondCmimiMeILarte.Remove(0, 1);
             double first = Double.Parse(cmimiMeILarte);
             double second = Double.Parse(secondCmimiMeILarte);
+            
+            config.TakeScr("TS6_TC3");
             if (first > second)
             {
                 Assert.Pass();

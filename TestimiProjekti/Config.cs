@@ -14,5 +14,10 @@ namespace TestimiProjekti
             driver.Navigate().GoToUrl(url);
             driver.Manage().Window.Maximize();
         }
+        public void TakeScr(string parametri)
+        {
+         Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
+         ss.SaveAsFile(("C:\\Users\\Mirejete Kastrati\\Desktop\\Test\\"+  parametri+".png"), OpenQA.Selenium.ScreenshotImageFormat.Png);
+        }
     }
 }

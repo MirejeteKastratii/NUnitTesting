@@ -75,10 +75,10 @@ namespace TestimiProjekti
 
             IWebElement pasaportaInp = config.driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/form/div[1]/table/tbody/tr[6]/td/input"));
             actions.MoveToElement(pasaportaInp).Click().Perform();
-            pasaportaInp.SendKeys("asdfdsfafdasf");
+            pasaportaInp.SendKeys("pasaportapalytutuidhje");
             IWebElement lejeQendrimiInp = config.driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/form/div[1]/table/tbody/tr[7]/td/input"));
             actions.MoveToElement(lejeQendrimiInp).Click().Perform();
-            lejeQendrimiInp.SendKeys("adfdfasfasdfasdfsadf");
+            lejeQendrimiInp.SendKeys("lejeqendrimiPtyutyuytualidhje");
             IWebElement arsyejaInp = config.driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/form/div[1]/table/tbody/tr[8]/td/textarea"));
 
             actions.MoveToElement(arsyejaInp).Click().Perform();
@@ -100,6 +100,7 @@ namespace TestimiProjekti
             Thread.Sleep(5000);
             string elMesazhi = config.driver.FindElement(By.XPath("/html/body/div[4]/div/div[2]/p")).Text;
             string mesazhi = "Lejeqendirmi nuk eshte valid";
+            config.TakeScr("TS12_TC2");
             if (elMesazhi == mesazhi)
             {
                 Assert.Pass();
