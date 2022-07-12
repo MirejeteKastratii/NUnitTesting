@@ -31,5 +31,11 @@ namespace Testimi
         public static string KahootName2 = "test123";
         public static string FbNumber = "+38349326024";
         public static string FbPw = "1234Qwer.";
+        public static string EKsFlora = "1249496045";
+        public static string EKsFloraPw = "Floraflora7.";
+        public static string LeternjoftimiPerProfilTePaautorizuar = "1007380387";
+        public static string pwPerProfilTePaautorizuar = "1234Qwer.";
+
+
     }
 }
